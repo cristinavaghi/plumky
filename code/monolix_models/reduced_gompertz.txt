@@ -1,0 +1,17 @@
+DESCRIPTION: Gompertz 1 dof model 
+[LONGITUDINAL]
+INPUT:
+parameter = {tin, V0, beta, Vc, k, q}
+
+EQUATION:
+t_0 = tin
+V_0 = V0
+
+alpha0 = q + k*beta
+
+d_V = (alpha0-beta*log(V/Vc))*V
+
+ddt_V = d_V
+
+OUTPUT:
+output = V

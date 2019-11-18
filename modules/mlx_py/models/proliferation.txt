@@ -1,0 +1,21 @@
+DESCRIPTION: Compartmental1 model 
+[LONGITUDINAL]
+INPUT:
+parameter = {V0, a, K}
+
+EQUATION:
+t_0 = 0
+V_0 = V0
+P_0 = V_0
+N_0 = 0
+
+
+d_P = a*P*(1-P/K)
+d_N = a/K*P^2
+
+ddt_P = d_P
+ddt_N = d_N
+V = P + N
+
+OUTPUT:
+output = V

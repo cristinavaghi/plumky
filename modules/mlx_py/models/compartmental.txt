@@ -1,0 +1,21 @@
+DESCRIPTION: Compartmental2 model 
+[LONGITUDINAL]
+INPUT:
+parameter = {V0, a, b}
+
+EQUATION:
+t_0 = 0
+V_0 = V0
+P_0 = V_0
+N_0 = 0
+
+
+d_P = (a-b)*P
+d_N = b*P
+
+ddt_P = d_P
+ddt_N = d_N
+V = P + N
+
+OUTPUT:
+output = V

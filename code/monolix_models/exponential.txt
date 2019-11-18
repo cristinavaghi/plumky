@@ -1,0 +1,15 @@
+DESCRIPTION: Exponential model 
+[LONGITUDINAL]
+INPUT:
+parameter = {tin, V0, a}
+
+EQUATION:
+t_0 = tin
+V_0 = V0
+
+d_V = a*V
+
+ddt_V = d_V
+
+OUTPUT:
+output = V

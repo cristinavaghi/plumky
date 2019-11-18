@@ -1,0 +1,15 @@
+DESCRIPTION: Power law model 
+[LONGITUDINAL]
+INPUT:
+parameter = {V0, a, gamma}
+
+EQUATION:
+t_0 = 0
+V_0 = V0
+
+d_V = a*V^gamma
+
+ddt_V = d_V
+
+OUTPUT:
+output = V

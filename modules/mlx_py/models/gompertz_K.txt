@@ -1,0 +1,16 @@
+DESCRIPTION: Gompertz with K model 
+[LONGITUDINAL]
+INPUT:
+parameter = {V0, a, K}
+
+EQUATION:
+t_0 = 0
+V_0 = V0
+
+
+d_V = a*V*log(K/V)
+
+ddt_V = d_V
+
+OUTPUT:
+output = V

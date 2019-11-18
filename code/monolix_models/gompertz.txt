@@ -1,0 +1,15 @@
+DESCRIPTION: Gompertz model 
+[LONGITUDINAL]
+INPUT:
+parameter = {tin,V0, alpha0, beta, Vc}
+
+EQUATION:
+t_0 = tin
+V_0 = V0
+
+
+d_V = (alpha0 - beta*log(V/Vc))*V
+ddt_V = d_V
+
+OUTPUT:
+output = V

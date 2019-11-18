@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+
+
+\linespread{1.05}         % Palladio needs more leading (space between lines)
+%\usepackage[T1]{fontenc}
+
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}%\usepackage{mathpazo} %%%%%%%%FONT STYLE
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8x]{inputenc} 
+\usepackage{amsmath} 
+%\usepackage{amssymb} 
+\usepackage{graphicx} \usepackage[all,dvips]{xy}
+%\usepackage{amsthm,dsfont} 
+\usepackage[frenchb,english]{babel} 
+\usepackage{ifpdf} \usepackage{color} %\usepackage[active]{srcltx}
+%\usepackage{tgbonum}
+%%\usepackage{newpxtext}
+\usepackage{subcaption}
+
+\usepackage{bbm} % to use \mathbbm{1}
+%\usepackage{enumitem}
+%\usepackage{lmodern} 
+\usepackage{enumerate} \usepackage{fancybox} \usepackage{amsbsy} %\usepackage{pstricks}
+\usepackage{titling} \usepackage{yhmath} \usepackage{lscape} \usepackage{float}  % Pour placer les figures exactement là ou JE dis, avec [H]
+\usepackage{array} \usepackage{multirow}\usepackage{pdflscape}\usepackage{indentfirst} \usepackage{verbatim}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{bibentry}
+\nobibliography*
+\usepackage{multibib}
+\usepackage{multido}
+\usepackage{geometry}
+%\usepackage{subfig}
+
+\usepackage{caption}
+%\usepackage{ulem} % barrer du texte % Caution: using this package causes an issue in the use of apalike bibliography style: the journal gets underlined instead of italics
+\usepackage{authblk}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{marginnote}
+%\usepackage{lmodern,textcomp} % for the euro symbol
+%\usepackage[official]{eurosym} % for the euro symbol
+\usepackage{setspace} % to set line spacing using command \setstretch
+\usepackage{pdfpages} % to include pdf files
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}\sloppy
+% Options pour les liens hypertexte
+\hypersetup{
+       backref=true,                           % Permet d'ajouter des liens dans
+       pagebackref=true,                       % les bibliographies
+       hyperindex=true,                        % Ajoute des liens dans les index.
+       colorlinks=true,                        % Colorise les liens.
+       breaklinks=true,                        % Permet le retour à la ligne dans les liens trop longs.
+       urlcolor= blue,                         % Couleur des hyperliens.
+       linkcolor= blue,                        % Couleur des liens internes.
+       citecolor=blue,			% Couleur pour les liens de biblio
+       bookmarks=true,                         % Créé des signets pour Acrobat.
+       bookmarksopen=true,                     % Si les signets Acrobat sont créés,
+                                               % les afficher complètement.
+       pdftitle={},  % Titre du document.
+                                               % Informations apparaissant dans
+       pdfauthor={Cristina Vaghi},                      % dans les informations du document
+       pdfsubject={Mathematics}           % sous Acrobat.
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Marges %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\oddsidemargin 0cm \evensidemargin 0cm
+\setlength{\textwidth}{160mm} \setlength{\parindent}{0.5cm}
+\setlength{\parskip}{0.2cm}
+\setlength{\oddsidemargin}{0mm} \setlength{\textheight}{220mm}
+\setlength{\footskip}{18mm} \setlength{\topmargin}{0mm}
+\setlength{\headheight}{0mm} \setlength{\headsep}{10mm}
+\setlength{\droptitle}{-3cm}
+\def\labelitemi{$\bullet$}
+
+\newenvironment{smallTopMargin}{% Used to locally change the length of margins
+\begin{list}{}{%
+\setlength{\voffset}{-1in}
+\setlength{\topmargin}{1cm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+}%
+\item[]}{\end{list}}
+
+\usepackage[font={small}, labelfont = {small, bf}]{caption}
+\captionsetup{labelsep=period}
+\usepackage{booktabs}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}

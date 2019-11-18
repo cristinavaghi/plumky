@@ -1,0 +1,67 @@
+********************************************************************************
+*                           exponential.mlxtran                                *
+*                           May 22, 2019 at 17:11:06                           *
+*                           Monolix version : 5.0.1                            *
+********************************************************************************
+
+POPULATION PARAMETERS ESTIMATION _______________________________________________
+
+Fixed Effects ----------------------------     se_sa    rse(%)
+V0_pop                         :         1                    
+a_pop                          :     0.118   0.00968      8.21
+
+Standard Deviation of the Random Effects -
+omega_a                        :    0.0834    0.0308      36.9
+
+Error Model Parameters -------------------
+b                              :      37.2      8.71      23.4
+
+Elapsed time (seconds) :      4.6
+CPU time     (seconds) :       25
+ _______________________________________________________________________________
+
+
+CORRELATION MATRIX OF THE ESTIMATES ____________________________________________
+
+Fisher by Stochastic Approximation ---------------------------------------------
+Correlation Matrix :
+  a_pop         1
+omega_a   0.83334         1
+      b  -0.98281  -0.84803         1
+                               min       max   max/min
+Eigen values           :     0.017       2.8   1.7e+02
+
+Elapsed time (seconds) :    0.95
+CPU time     (seconds) :       4
+ -------------------------------------------------------------------------------
+ _______________________________________________________________________________
+
+
+INDIVIDUAL PARAMETERS ESTIMATION _______________________________________________
+
+Individual Parameters Estimation by Conditional Mode ---------------------------
+           min        Q1    median        Q3       max
+V0 :         1         1         1         1         1
+a  :     0.105     0.113     0.116     0.121     0.143
+
+Elapsed time (seconds) :   0.042
+CPU time     (seconds) :       0
+ -------------------------------------------------------------------------------
+ _______________________________________________________________________________
+
+
+LOG-LIKELIHOOD ESTIMATION ______________________________________________________
+                                                (is)
+
+-2 x log-likelihood                 :        9128.44
+Akaike Information Criteria   (AIC) :        9134.44
+Bayesian Information Criteria (BIC) :        9140.96
+
+Elapsed time              (seconds) :             16
+CPU time                  (seconds) :             85
+
+
+[Importance Sampling] Standard error        : 0.0252
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+ _______________________________________________________________________________
+

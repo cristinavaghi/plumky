@@ -1,0 +1,12 @@
+TRACE - [   ][ lixoft::monolix::MonolixRequestHandler::isBusy ]: The following errors occurs when loading the model:
+***********************************************************************
+filename: /Users/cristina/Documents/PhD/materiale/shared_folders/nanoparticles_pharmacometrics/Projects/in_vitro/cell_doubling_time/monolix_analysis/MDA-MB-231/exponential/Exp.txt
+description: Cannot load the model from its file '/Users/cristina/Documents/PhD/materiale/shared_folders/nanoparticles_pharmacometrics/Projects/in_vitro/cell_doubling_time/monolix_analysis/MDA-MB-231/exponential/Exp.txt', as this file could not be found.
+
+
+TRACE - [   ][ lixoft::monolix::MonolixRequestHandler::isBusy ]: The following errors occurs when loading the model:
+***********************************************************************
+filename: /Users/cristina/Documents/PhD/materiale/shared_folders/nanoparticles_pharmacometrics/projects/in_vitro/cell_doubling_time/monolix_analysis/MDA-MB-231/exponential/Exp.txt
+description: Cannot load the model from its file '/Users/cristina/Documents/PhD/materiale/shared_folders/nanoparticles_pharmacometrics/projects/in_vitro/cell_doubling_time/monolix_analysis/MDA-MB-231/exponential/Exp.txt', as this file could not be found.
+
+

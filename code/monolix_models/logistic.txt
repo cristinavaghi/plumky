@@ -1,0 +1,15 @@
+DESCRIPTION: Logistic model 
+[LONGITUDINAL]
+INPUT:
+parameter = {tin,V0,a,K}
+
+EQUATION:
+t_0 = tin
+V_0 = V0
+
+d_V = a*V*(1 - (V/K))
+
+ddt_V = d_V
+
+OUTPUT:
+output = V

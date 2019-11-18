@@ -1,0 +1,21 @@
+DESCRIPTION: Exponential linear 
+[LONGITUDINAL]
+INPUT:
+parameter = {V0, a0, a1}
+
+EQUATION:
+t_0 = 0
+V_0 = V0
+tau=(1/a0*log(a1/(V_0*a0)))
+
+if t < tau
+  dV = a0*V
+else
+  dV = a1
+end
+
+ddt_V = dV 
+
+
+OUTPUT:
+output = V

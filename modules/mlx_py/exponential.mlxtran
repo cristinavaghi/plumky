@@ -1,0 +1,52 @@
+<DATAFILE>
+
+[FILEINFO]
+file = 'learning_data.txt'
+delimiter = tab
+header = {ID, Time, Observation}
+
+[CONTENT]
+ID = {use=identifier}
+Time = {use=time}
+Observation = {use=observation, name=Observation, type=continuous}
+
+<MODEL>
+
+[INDIVIDUAL]
+input = {V0_pop, a_pop, omega_a}
+
+DEFINITION:
+V0 = {distribution=normal, typical=V0_pop, no-variability}
+a = {distribution=logNormal, typical=a_pop, sd=omega_a}
+
+[LONGITUDINAL]
+input = {b}
+
+file = 'models/exponential.txt'
+
+DEFINITION:
+Observation = {distribution=normal, prediction=V, errorModel=proportional(b)}
+
+<FIT>
+data = Observation
+model = Observation
+
+<PARAMETER>
+V0_pop = {value=1, method=FIXED}
+a_pop = {value=0.002, method=MLE}
+b = {value=0.3, method=MLE}
+omega_a = {value=1, method=MLE}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = conditionalMode)
+fim(method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+plotResult(method = {indfits, obspred, residualsscatter, covariancemodeldiagnosis, residualsdistribution, vpc, predictiondistribution })
+
+[SETTINGS]
+GLOBAL:
+exportpath = 'exponential'
+
