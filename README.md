@@ -41,7 +41,12 @@ Results are organized as follows inside the folder folder_results/cell_line_name
 - backward predictions: a summary is created (summary_backward_predictions.pdf) with the relative errors of each model obtained with bayesian inference and likelihood maximization (detailed results and figures are in prediction_summary). Individual prediction plots can be found in backward_prediction/model_name, in case of bayesian inference, and in backward_prediction_lm/model_name, in case of likelihood maximization. The files .db contain the workspace with the results of backward predictions for each individual.
 The folders named with numbers contain the test set and the learning test used for the k-fold cross validation with the monolix analysis of the learning set. The parameter distributions found are used then as prior distribution to perform bayesian inference.
 
-# How to add a new data set
+# Data
+Three datasets have been considered:
+- breast data measured by volume (breast_vol_data.txt): https://zenodo.org/record/3574531
+- lung data measured by volume (lung_vol_data.txt): https://zenodo.org/record/3572401
+- breast data measured by fluorescence (breast_fluo_data.txt): https://zenodo.org/record/3593919
+## How to add a new data set
 It is possible to add a new data set. Data must be saved in a txt file with three columns (ID, Time, Observation) and each row contains the observation of an individual at a certain time. The new data set must be declared in the function import_data in import_data.py.
 
 # How to add a new tumor growth model
