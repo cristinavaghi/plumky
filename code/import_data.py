@@ -28,8 +28,6 @@ def divide_learning_test_groups(data_set, N = 2):
             set_loc = set_loc.append(loc)
         sets_list[i] = set_loc
     return sets_list
-
-
 def create_k_subsets(control_stack,
                      n_sets,
                      validation_folder,
@@ -53,9 +51,6 @@ def create_k_subsets(control_stack,
             series_to_csv(learning_data_path, learning_set, N)
         if os.path.isfile(test_data_path) is False:
             series_to_csv(test_data_path, test_set, N)
-
-
-
 def import_data(data_name, folder,  N=3):
     '''
     function to import data.
@@ -78,7 +73,6 @@ def import_data(data_name, folder,  N=3):
     - y_label (string): name of the y label
     - n_sets (int): number of subsets that are created for the k-fold cross validation (default: number of sets = number of individuals in the dataset)
     - lambda_alpha (scalar): value of the in vitro proliferation rate relative to the
-
     '''
     validation_folder = os.path.join(folder, data_name)
     if data_name == 'MDA-MB-231_fluorescence':
