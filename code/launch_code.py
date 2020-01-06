@@ -62,6 +62,8 @@ if run_global_monolix_analysis == 1:
 ##               k-fold MONOLIX                 ##
 ##################################################
 ##################################################
+# only Gompertz and reduced Gompertz models
+models_list = [model_name for model_name in models_list if model_name in ['gompertz','reduced_gompertz']]
 
 # k-fold cross validation: in this part the population analysis on the learning set is performed
 if run_k_fold_monolix == 1:
