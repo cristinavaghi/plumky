@@ -46,9 +46,7 @@ def k_fold_monolix(n_sets,
 
         monolix_computation(data_path, models_list, os.path.join(k_folder,'monolix_analysis'), V0, Vc, error_model)
 
-        print('_______________________________________________')
         print(np.str((i+1)/n_sets*100) + '%..')
-        print('_______________________________________________')
     return
 
 ###############################################

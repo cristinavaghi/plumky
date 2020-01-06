@@ -5,6 +5,8 @@ pd.set_option('display.float_format', lambda x: '%.3g' % x)
 import numpy as np
 import os
 from linear_regression import *
+import sys
+sys.path.append('../modules')
 import mlx_py as mlx
 import matplotlib.pyplot as plt
 from model_definition import Model

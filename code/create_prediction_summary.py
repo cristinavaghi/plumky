@@ -292,7 +292,6 @@ def read_results(models_list,
                     t_shift  = data[ID].index[-N]
                     Y_med    = np.median(y,axis = 0)
                     if np.any(np.isnan(t_init)) and method!='lm':# or np.all(Y_med > V0):
-                        print(model_name+' - Warning: NaN values in t_init')
                         t_init = t_init[np.where(np.logical_not(np.isnan(t_init)))]
                     t0_pred = np.median(t_init)
 
@@ -409,7 +408,8 @@ def save_results(folder,
     current_directory = os.getcwd()
     abs_path = os.path.abspath(folder)
     os.chdir(abs_path)
-    bash_compile_table = ('pdflatex summary_backward_predictions.tex')
+    bash_compile_table = ('pdflatex -shell-escape -interaction=nonstopmode -file-line-error summary_backward_predictions.tex  | grep -i ".*:[0-9]*:.*"')
+
     res = os.system(bash_compile_table)
 
     if res == 256:
@@ -417,4 +417,4 @@ def save_results(folder,
     bash_hide_files = ('SetFile -a V *.aux  *.log  *.out')
     os.system(bash_hide_files)
     os.chdir(current_directory)
-
+    print(res)

@@ -16,6 +16,16 @@ from monolix_functions import monolix_computation
 from k_fold_cross_validation import k_fold_monolix, clean_monolix_workspace, k_fold_prediction, monolix_computation
 from backward_prediction import backward_prediction_likelihood_maximization
 from create_prediction_summary import *
+import warnings
+temp = open("warnings.log", 'w')
+temp.close()
+def customwarn(message, category, filename, lineno, file=None, line=None):
+    handle = open("warnings.log", 'a')
+    handle.write(warnings.formatwarning(message, category, filename, lineno))
+    handle.close()
+
+warnings.showwarning = customwarn
+
 
 
 tmin = -20 # to set the time scale for backward predictions
@@ -37,6 +47,7 @@ validation_folder = os.path.join(folder_results, cell_line_name)
 ##################################################
 ##################################################
 if run_global_monolix_analysis == 1:
+    print('————————————————————————————————————————————————————————')
     print("Global Monolix analysis")
     global_monolix_folder = os.path.join(validation_folder,'global_monolix_analysis')
     monolix_computation(os.path.join(global_monolix_folder,'data.txt'), models_list, global_monolix_folder, V0, Vc, error_model, x_label, y_label, lambda_alpha)
@@ -54,6 +65,7 @@ if run_global_monolix_analysis == 1:
 
 # k-fold cross validation: in this part the population analysis on the learning set is performed
 if run_k_fold_monolix == 1:
+    print('————————————————————————————————————————————————————————')
     print("k-fold Monolix analysis")
     k_fold_monolix(n_sets, validation_folder, models_list, V0, Vc, error_model)
 
@@ -68,6 +80,7 @@ if clean_monolix_workspace == 1:
 ##################################################
 # k-fold predictions with bayesian inference
 if run_k_fold_predictions_bi == 1:
+    print('————————————————————————————————————————————————————————')
     print("Backward predictions with Bayesian inference")
     k_fold_prediction(n_sets, validation_folder, models_list, Vc, N, x_label, y_label, tmin)
     backward_folder = os.path.join(validation_folder,'backward_prediction_bi')
@@ -75,6 +88,7 @@ if run_k_fold_predictions_bi == 1:
 
 # predictions with likelihood maximization
 if run_predictions_lm == 1:
+    print('————————————————————————————————————————————————————————')
     print("Backward predictions with likelihood maximization")
     backward_prediction_likelihood_maximization(control_stack, validation_folder, models_list, Vc, V0, N, x_label, y_label, tmin)
 
@@ -123,3 +137,7 @@ if clean_backward_workspace == 1:
             if '.out.db' in item:
                 if os.path.isfile(os.path.join(b_folder, item)):
                     os.unlink(os.path.join(b_folder, item))
+
+print('————————————————————————————————————————————————————————')
+print('Finished successfully!')
+print('————————————————————————————————————————————————————————')

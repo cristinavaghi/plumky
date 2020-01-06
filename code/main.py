@@ -8,20 +8,20 @@ folder_results = 'results' # name of the folder where the results are saved:
                             #   the population parameter distributions are saved for the backward predictions with bayesian inference
 N              = 3 # number of observations to take into account for the backward predictions
 
-run_global_monolix_analysis = 1 # to run global monolix analysis
-run_k_fold_monolix          = 1 # to run monolix for the k-fold cross validation
-clean_monolix_workspace     = 1 # to clean the folder where monolix results are saved (in case of k-fold cross validation; only population parameters remain)
-run_k_fold_predictions_bi   = 1 # to run backward predictions using bayesian inference
-run_predictions_lm          = 1 # to run backward predictions using likelihood maximization
+run_global_monolix_analysis = 0 # to run global monolix analysis
+run_k_fold_monolix          = 0 # to run monolix for the k-fold cross validation
+clean_monolix_workspace     = 0 # to clean the folder where monolix results are saved (in case of k-fold cross validation; only population parameters remain)
+run_k_fold_predictions_bi   = 0 # to run backward predictions using bayesian inference
+run_predictions_lm          = 0 # to run backward predictions using likelihood maximization
 create_graphics             = 1 # to create summary of backward predictions
 clean_backward_workspace    = 1 # to clean the folder with the results of backward predictions (only individual plots remain)
 
 
 
 models_list = list([
-                    'exponential',
-                    'logistic',
-                    'gompertz',
+                    # 'exponential',
+                    # 'logistic',
+                    # 'gompertz',
                     'reduced_gompertz'
                     ])
 

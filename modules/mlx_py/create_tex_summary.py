@@ -217,7 +217,7 @@ def save_results(folder, models):
     current_directory = os.getcwd()
     abs_path = os.path.abspath(folder)
     os.chdir(abs_path)
-    bash_compile_table = ('pdflatex summary.tex')
+    bash_compile_table = ('pdflatex -shell-escape -interaction=nonstopmode -file-line-error summary.tex  | grep -i ".*:[0-9]*:.*"')
     res = os.system(bash_compile_table)
 
     if res == 256:
