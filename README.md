@@ -3,7 +3,6 @@ Program to run predictions of tumor kinetics with bayesian inference and likelih
 # Program requirements
 These programs must be installed to run the code:
 - python 3.6.7
-- pandas 0.23.4
 - R 3.5.1
 - MonolixSuite2019
 
@@ -13,7 +12,7 @@ These programs must be installed to run the code:
 - matplotlib
 - numpy
 - shelve
-- pandas
+- pandas (version 0.23.4)
 - statsmodels
 - seaborn
 - mlx_py*
