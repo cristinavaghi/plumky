@@ -12,7 +12,7 @@ def csv_to_series(data_file):
         t = df[df['ID']==ID]['Time'].values
         obs = df[df['ID']==ID]['Observation'].values
         for i in range(len(t)):
-            df1.set_value(ID, t[i], obs[i])
+            df1.at[ID, t[i]] = obs[i]
     return df1.stack()
 
 def series_to_csv(filename,
