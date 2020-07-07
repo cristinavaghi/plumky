@@ -1,3 +1,5 @@
+# PLUMKY - Population modeling of tumor growth kinetics and bayesian predictions
+
 Program to run predictions of tumor kinetics with bayesian inference and likelihood maximization. Specifically designed to perform backward extrapolation of initiation time.
 
 # Program requirements
